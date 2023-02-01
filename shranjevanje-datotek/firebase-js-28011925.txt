@@ -1,0 +1,73 @@
+import React, { useState, useEffect } from 'react';
+import './styles.css';
+import {signinwithgoogle, signOutWithGoogle, auth} from './firebase';
+
+function InputForm() {
+  const [text, setText] = useState('');
+  const [image, setImage] = useState(null);
+  const [show, setShow] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        setIsSignedIn(true);
+      } else {
+        setIsSignedIn(false);
+      }
+    });
+  }, [isSignedIn]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!text || !image) {
+      alert('Text or Image not set');
+    } else {
+      setShow(true);
+    }
+  }
+
+  return (
+    <div>
+      <div className="header">
+        <h1>Welcome to My Website</h1>
+        { !isSignedIn &&
+        <button onClick={signinwithgoogle} type="button" class="login-with-google-btn">Sign in With Google</button>
+      }
+      { isSignedIn &&
+        <div>
+          <button onClick={signOutWithGoogle} type="button" class="signout-with-google-btn">Sign out</button>
+          <button class="notion-button" onClick={() => window.location.href = "https://mellow-roarer-f18.notion.site/Osnovno-tkivo-c7df6096f8234f7f8e1e44b344a5c05d"}>Notion</button>
+
+
+        </div>
+      }
+      </div>
+     
+      <form>
+        <label>
+          Enter text:
+          <input type="text" value={text} onChange={e => setText(e.target.value)} />
+        </label>
+        <br />
+        <label>
+          Select image:
+          <input type="file" onChange={e => setImage(e.target.files[0])} />
+        </label>
+        <br />
+        <button type="submit" onClick={handleSubmit}>
+          Display
+        </button>
+      </form>
+      { show &&
+        <div>
+          <p className="text-color">{text}</p>
+          <img src={URL.createObjectURL(image)} alt="Selected stuff"  width="300px" height="300px"/>
+        </div>
+      }
+      
+    </div>
+  );
+}
+
+export default InputForm;

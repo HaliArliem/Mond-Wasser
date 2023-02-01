@@ -1,0 +1,164 @@
+body {
+  background-color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  border-radius: 10px;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+  background-color: white;
+}
+
+img {
+  border: solid 1px white;
+  border-radius: 10px;
+}
+.text-color{
+  color:white;
+}
+
+.signout-with-google-btn {
+  background-color: gray;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.signout-with-google-btn:hover {
+    background-color: black; /* google blue hover */
+}
+.login-with-google-btn {
+  background-color: #fff;
+  color: #4285f4; /* google blue */
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #4285f4;
+}
+.login-with-google-btn:hover {
+    background-color: #4285f4;
+    color: #fff;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+.notion-button {
+  text-decoration: none; /* Remove underline from link */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  display: flex;
+  justify-content: center;
+  background-color: #000; /* Black background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Add padding to button */
+  border-radius: 5px; /* Add rounded corners to button */
+  font-size: 14px; /* Set font size */
+  font-weight: bold; /* Make text bold */
+
+}
+
+.notion-button:hover {
+  background-color: #ff0000; /* Change button background color on hover */
+}
+.notion-button-container {
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  background-color: black; /* White background color */
+  padding: 20px; /* Add padding to container */
+}
+
+
+.not-authorized-container {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+.computer-image {
+  /* Add your image properties here */
+  animation: computer-animation 2s ease-in-out;
+}
+
+@keyframes computer-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+.the-intro-class {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-text-style{
+  text-align:center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  }
+  .monitor-animation {
+    animation: monitor-animation 5s infinite;
+    display:block;    
+    margin:0 auto;
+  
+  }
+    
+  
+
+
+
