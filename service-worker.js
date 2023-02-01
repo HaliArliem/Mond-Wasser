@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Mond-Wasser/precache-manifest.a9ccb6bcbd415697a2226f5c82ed58b7.js"
+  "/Mond-Wasser/precache-manifest.80d0fb55c11051e42ba10158dd7831cb.js"
 );
 
 workbox.clientsClaim();
