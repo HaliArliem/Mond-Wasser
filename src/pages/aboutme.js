@@ -22,7 +22,7 @@ return (
 <p>online-go.com: fsdkpfgksdgf</p>
 <p>Spotify alternative.com: fsdkpfgksdgf</p>
 <p>Languages I'm studying altefsdfsdff</p>
-<p>xcvmxvmofm I'm studying altefsdfsdff</p>
+<p>xcvmxvmofm I'm studying wakanda</p>
 
 </div>
 );
